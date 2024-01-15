@@ -1,5 +1,7 @@
 package org.gkswargam.models;
 
+import org.gkswargam.strategy.ParkingSlotAssignmentStrategyType;
+
 import java.util.List;
 
 public class ParkingLot extends BaseModel {
@@ -9,6 +11,15 @@ public class ParkingLot extends BaseModel {
     private Address address;
     private List<VehicleType> allowedVehicleTypes;
     private ParkingLotStatus parkingLotStatus;
+    private ParkingSlotAssignmentStrategyType parkingSlotAssignmentStrategyType;
+
+    public ParkingSlotAssignmentStrategyType getParkingSlotAssignmentStrategyType() {
+        return parkingSlotAssignmentStrategyType;
+    }
+
+    public void setParkingSlotAssignmentStrategyType(ParkingSlotAssignmentStrategyType parkingSlotAssignmentStrategyType) {
+        this.parkingSlotAssignmentStrategyType = parkingSlotAssignmentStrategyType;
+    }
 
     public List<Floor> getFloors() {
         return floors;
